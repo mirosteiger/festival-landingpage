@@ -1,20 +1,21 @@
 import Home from "Home";
-import { About } from "components/About";
+import { About } from "components/about/About";
 import { Lineup } from "components/lineup/Lineup";
 import { Navigation } from "components/navigation/Navigation";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
 const NavigationWrapper = () => {
     return (
-    <div>
+    <>
         <Navigation/>
         <Outlet/>
-    </div>
+    </>
     )
 };
 
 export const router = createBrowserRouter([
   {
+    // Keep Navigation on every site
     path: "/",
     element: <NavigationWrapper />,
     children: [

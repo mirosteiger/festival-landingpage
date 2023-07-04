@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
-// import Psycho from "assets/fonts/PsychoartRegular.ttf"
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -11,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
   
   html {
     box-sizing: border-box;
+    overflow-x: hidden;
+
     @media only screen and (max-width: 1200px){
       font-size: 58%;
     }
@@ -30,28 +31,12 @@ const GlobalStyles = createGlobalStyle`
 
 export default GlobalStyles;
 
-export const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1300px;
-  width: 100%;
+export const CenterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`
 
-  @media (max-width: 400px) {
-    padding: 0 10px;
-  }
-  @media (max-width: 991px) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: 1500px) {
-    max-width: 1500px;
-  }
-
-  @media (min-width: 1800px) {
-    max-width: 1800px;
-    padding: 0 30px;
-  }
-`;
 
 export const Button = styled(Link)<{
   borderRadius?: boolean;
