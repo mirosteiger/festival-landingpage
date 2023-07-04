@@ -5,16 +5,14 @@ export const HeroWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  border: red solid 2px;
 `;
 
 export const HeroBanner = styled.img`
-  // pull up the CTA
-  margin-bottom: -12rem;
-
   @media only screen and (max-width: 768px) {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
   }
   @media only screen and (min-width: 481px) {
     width: 100vw;
@@ -61,15 +59,16 @@ export const ArrowDown = styled(IoIosArrowDown)`
 export const Astronaut = styled.img`
   position: absolute;
   top: 5.5rem;
-  left:16rem;
+  right:20%;
+  width: 30rem;
 
   animation: ${floating} 6s ease-in-out infinite;
-  @media only screen and (max-width: 768px) {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  @media only screen and (min-width: 481px) {
-    width: 100vw;
-  }
+  // @media only screen and (max-width: 768px) {
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  // @media only screen and (min-width: 481px) {
+  //   width: 100vw;
+  // }
 `;
