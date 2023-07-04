@@ -1,17 +1,12 @@
-import logo from "logo.svg";
 import "Home.css";
-import { Hero } from "components/Hero";
+import { About } from "components/about/About";
+import { Hero } from "components/hero/Hero";
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Hero />
-      </header>
-      <main>
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>HOME</h1>
-      </main>
+    <div >
+      <Hero />
+      <About />
     </div>
   );
 }
