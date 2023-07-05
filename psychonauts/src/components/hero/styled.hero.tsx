@@ -21,29 +21,26 @@ export const HeroBanner = styled.img`
 
 export const HeroTitleWrapper = styled.div<{top?: string; left?: string; }>`
   position: absolute; 
-  top: 8rem;
-  left: 13rem;
+  top: ${(props) => props.top ? props.top : "0"};
+  left: ${(props) => props.left ? props.left : "0"};
   color: orange;
   text-align: left;
-  // text-shadow: 0 2px 1px #79a06d, 
-  //     -1px 3px 1px #82ad75, 
-  //     -2px 5px 1px #8ebf80;
-
-  text-shadow: 3px 3px 20px #ff99cc,
-    -2px 1px 30px #ff99cc;
-
-  // text-shadow: 10px 10px 25px rgb(81,67,21),
-  //   -10px 10px 25px rgb(81,67,21),
-  //   -10px -10px 25px rgb(81,67,21),
-  //   10px -10px 25px rgb(81,67,21);
-
+   text-shadow: 0 2px 1px #79a06d, 
+       -1px 3px 1px #82ad75, 
+       -2px 5px 1px #8ebf80,
+       -2px 1px 30px #ff99cc,
+       3px 3px 20px #ff99cc;
 `
 
 export const H1 = styled.h1`
-  font-size: 6rem
+  font-size: 8rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
 `
 export const H2 = styled.h2`
-  font-size: 2.5rem
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
 `
 
 const bump = keyframes`

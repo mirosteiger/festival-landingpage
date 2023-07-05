@@ -1,3 +1,3 @@
 export const Lineup = () => {
-  return <h1>Linup</h1>;
+  return <h1>Lineup</h1>;
 };

@@ -14,7 +14,7 @@ export const Hero = () => {
     <HeroWrapper>
       <HeroBanner src={heroBanner} alt="HeroImage" />
       <Astronaut src={astro} alt="astronaut" />
-      <HeroTitleWrapper id="title">
+      <HeroTitleWrapper id="title" top={"11.5rem"} left={"11.5rem"}>
         <H1>
           Psychonauts
         </H1>
