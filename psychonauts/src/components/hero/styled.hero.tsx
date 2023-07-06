@@ -19,12 +19,12 @@ export const HeroBanner = styled.img`
   }
 `;
 
-export const HeroTitleWrapper = styled.div<{top?: string; left?: string; }>`
+export const HeroTitleWrapper = styled.div<{ $top?: string; $left?: string; }>`
   position: absolute; 
-  top: ${(props) => props.top ? props.top : "0"};
-  left: ${(props) => props.left ? props.left : "0"};
+  top: ${(props) => props.$top ? props.$top : "0"};
+  left: ${(props) => props.$left ? props.$left : "0"};
   color: orange;
-  text-align: left;
+  text-align: right;
    text-shadow: 0 2px 1px #79a06d, 
        -1px 3px 1px #82ad75, 
        -2px 5px 1px #8ebf80,
@@ -32,16 +32,7 @@ export const HeroTitleWrapper = styled.div<{top?: string; left?: string; }>`
        3px 3px 20px #ff99cc;
 `
 
-export const H1 = styled.h1`
-  font-size: 8rem;
-  text-transform: capitalize;
-  font-variant: small-caps;
-`
-export const H2 = styled.h2`
-  font-size: 3rem;
-  text-transform: capitalize;
-  font-variant: small-caps;
-`
+
 
 const bump = keyframes`
 0% {
@@ -83,8 +74,9 @@ export const ArrowDown = styled(IoIosArrowDown)`
 export const Astronaut = styled.img`
   position: absolute;
   top: 15vw;
-  right:20%;
+  right:10%;
   width: 30vw;
+  overflow: hidden;
 
   animation: ${floating} 6s ease-in-out infinite;
   
@@ -97,3 +89,12 @@ export const Astronaut = styled.img`
   //   width: 100vw;
   // }
 `;
+
+
+export const Date = styled.h1`
+
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  color: #e2e2e2;
+`

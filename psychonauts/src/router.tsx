@@ -5,12 +5,16 @@ import { Navigation } from "components/navigation/Navigation";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
 const NavigationWrapper = () => {
-    return (
+  return (
     <>
-        <Navigation/>
-        <Outlet/>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Outlet />
+      </main>
     </>
-    )
+  )
 };
 
 export const router = createBrowserRouter([
