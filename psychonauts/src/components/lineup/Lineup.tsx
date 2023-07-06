@@ -1,3 +1,11 @@
+import { H2, SectionContainer } from "GlobalStyles";
+import { BandGallery } from "./BandGallery";
+
 export const Lineup = () => {
-  return <h1>Lineup</h1>;
+  return (
+    <SectionContainer>
+      <H2>Lineup</H2>
+      <BandGallery />
+    </SectionContainer>
+  );
 };
