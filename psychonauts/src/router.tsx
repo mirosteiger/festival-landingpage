@@ -1,5 +1,7 @@
 import Home from "Home";
 import { About } from "components/about/About";
+import { SignIn } from "components/auth/signin";
+import { Footer } from "components/footer/Footer";
 import { Lineup } from "components/lineup/Lineup";
 import { Navigation } from "components/navigation/Navigation";
 import { Outlet, createBrowserRouter } from "react-router-dom";
@@ -13,8 +15,11 @@ const NavigationWrapper = () => {
       <main>
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
-  )
+  );
 };
 
 export const router = createBrowserRouter([
@@ -36,9 +41,13 @@ export const router = createBrowserRouter([
         element: <Lineup />,
       },
       {
+        path: "/signin",
+        element: <SignIn />
+      },
+      {
         path: "/*",
         element: <h1>404</h1>,
-      }
+      },
     ],
   },
 ]);
