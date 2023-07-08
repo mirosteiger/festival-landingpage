@@ -37,6 +37,9 @@ const GlobalStyles = createGlobalStyle`
     padding-top: 5rem;
     min-height: calc(100vh - 5rem);
   }
+  img{
+    pointer-events: none;
+  }
 `;
 
 export default GlobalStyles;
