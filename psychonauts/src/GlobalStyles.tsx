@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
     justify-content: center;
     text-align: center;
     padding-top: 5rem;
+    min-height: calc(100vh - 5rem);
   }
 `;
 
@@ -44,33 +45,32 @@ export const CenterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-`
+`;
 
 export const SectionContainer = styled.div`
-    height: auto;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 3rem 10rem;
+
+  @media (max-width: 600px) {
+    padding: 3rem 5rem;
+  }
+  @media (max-width: 900px) {
     padding: 3rem 10rem;
+  }
+`;
 
-    @media (max-width: 600px) {
-      padding: 3rem 5rem;
-    }
-    @media (max-width: 900px) {
-      padding: 3rem 10rem;
-    }
-`
+export const Spacer = styled.div<{ size: string }>`
+  margin: ${(props) => props.size};
+`;
 
-
-export const Spacer = styled.div<{size: string}>`
-  margin: ${(props) => props.size}
-`
-
-export const NavButton = styled(Link) <{
+export const NavButton = styled(Link)<{
   $borderRadius?: boolean;
   $primary?: boolean;
   $big?: boolean;
@@ -110,18 +110,23 @@ export const H1 = styled.h1`
   font-size: 8rem;
   text-transform: capitalize;
   font-variant: small-caps;
-`
+`;
 export const H2 = styled.h2`
   font-size: 3rem;
   text-transform: capitalize;
   font-variant: small-caps;
-`
+`;
+export const H3 = styled.h3`
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
+`;
 
 export const Description = styled.p`
-    font-size: 1.4rem;
-`
+  font-size: 1.4rem;
+`;
 
-export const CTA = styled(Link) <{
+export const CTA = styled(Link)<{
   $bigRadius?: boolean;
   $big?: boolean;
   $fontBig?: boolean;
@@ -136,9 +141,7 @@ export const CTA = styled(Link) <{
   background-color: #fefefe;
   text-transform: capitalize;
   font-variant: small-caps;
-  font-family
-
-  &:hover {
+  font-family &:hover {
     background-color: #333;
     color: #fff;
     border: none;
@@ -155,9 +158,8 @@ export const CTA = styled(Link) <{
   }
 `;
 
-
 export const BackdropImage = styled.img`
-    filter: brightness(20%);
-    position: absolute;
-    z-index: -1;
-`
+  filter: brightness(20%);
+  position: absolute;
+  z-index: -1;
+`;
