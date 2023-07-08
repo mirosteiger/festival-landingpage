@@ -1,27 +1,42 @@
-import { Card, CardItem, CardTitle, CardWrapper } from "./styled.lineup";
-import images from "assets/images/bands/images"
-
+import {
+  Card,
+  CardImage,
+  CardImageContainer,
+  CardItem,
+  CardTitle,
+  CardWrapper,
+  ImageOverlay,
+  ImageOverlayIcon,
+} from "./styled.lineup";
+import { IoIosAdd } from "react-icons/io";
 
 interface BandCardProps {
-    data: {
-        name: string;
-        image_url: string;
-        genre: string;
-        description: string;
-    };
+  data: {
+    name: string;
+    img_url: string;
+    genre: string;
+    description: string;
+  };
 }
-export const BandCard = ({ data }: BandCardProps) => {
 
-    const { name, image_url, genre, description } = data;
-    console.log(images)
-    return (
-        <CardWrapper>
-            <CardItem>
-                <Card>
-                    <img src={"images[name]"} width={"100%"} height={"100%"} alt={image_url} />
-                    <CardTitle>{name}</CardTitle>
-                </Card>
-            </CardItem>
-        </CardWrapper>
-    )
+export const BandCard = ({ data }: BandCardProps) => {
+  const { name, img_url, genre, description } = data;
+
+  return (
+    <CardWrapper>
+      <CardItem>
+        <Card>
+          <CardImageContainer>
+            <CardImage src={img_url} alt={name} />
+            <ImageOverlay>
+              <ImageOverlayIcon>
+                <IoIosAdd />
+              </ImageOverlayIcon>
+            </ImageOverlay>
+          </CardImageContainer>
+          <CardTitle>{name}</CardTitle>
+        </Card>
+      </CardItem>
+    </CardWrapper>
+  );
 };
