@@ -3,13 +3,8 @@ import { GalleryWrapper } from "./styled.lineup";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "database/firebaseConfigSetter";
+import { IBandData } from "types";
 
-interface IBandData {
-  name: string;
-  genre: string;
-  description: string;
-  img_url: string;
-}
 
 export const BandGallery = () => {
   const [bands, setBands] = useState<IBandData[] | undefined>();
