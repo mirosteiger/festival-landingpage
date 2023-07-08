@@ -13,9 +13,9 @@ export const Navigation = () => {
           <NavLink to="/timetable">Timetable</NavLink>
           <NavLink to="/tickets">Tickets</NavLink>
         </NavMenu>
-        <NavLogo>
+        {/* <NavLogo>
           <img src={logo} alt="logo" />
-        </NavLogo>
+        </NavLogo> */}
         <NavBtn>
           <NavButton to="/signin">Sign In</NavButton>
         </NavBtn>
