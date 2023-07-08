@@ -11,3 +11,21 @@ export const FooterWrapper = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 `;
+
+export const FooterSection = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: -24px;
+`;
+
+export const FooterElement = styled.p`
+  color: #e2e2e2;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+`;
