@@ -50,7 +50,8 @@ export const CenterWrapper = styled.div`
   text-align: center;
 `;
 
-export const SectionContainer = styled.div`
+export const SectionContainer = styled.div<{$debug?: boolean}>`
+  border: ${(props) => props.$debug ? "2px solid red" : "none"};
   height: auto;
   width: 100%;
   position: relative;
@@ -121,15 +122,17 @@ export const H2 = styled.h2<{ $color?: string }>`
   font-variant: small-caps;
   color: ${(props) => props.$color ? props.$color : ""}
 `;
-export const H3 = styled.h3`
+export const H3 = styled.h3<{ $color?: string }>`
   font-size: 2rem;
   text-transform: capitalize;
   font-variant: small-caps;
+  color: ${(props) => props.$color ? props.$color : ""}
 `;
 
-export const Description = styled.p<{$color?: string}>`
+export const Description = styled.p<{ $color?: string }>`
   font-size: 1.4rem;
-  color: ${(props) => props.$color ? props.$color : ""}
+  color: ${(props) => props.$color ? props.$color : ""};
+  text-align: justify;
 `;
 
 export const CTA = styled(Link) <{

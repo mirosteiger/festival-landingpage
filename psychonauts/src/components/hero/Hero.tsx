@@ -18,7 +18,7 @@ export const Hero = () => {
           An interstellar music festival
         </H2>
         <Date>
-          04.08. - 06.08.
+          05.08. - 06.08. 2023
         </Date>
       </HeroTitleWrapper>
     </HeroWrapper>
