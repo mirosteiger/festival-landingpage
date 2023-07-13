@@ -1,12 +1,12 @@
 import Home from "Home";
-import { About } from "components/about/About";
-import { SignIn } from "components/auth/signin";
+import { AuthPage } from "components/auth/AuthPage";
 import { Footer } from "components/footer/Footer";
 import { Lineup } from "components/lineup/Lineup";
 import { Navigation } from "components/navigation/Navigation";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
-const NavigationWrapper = () => {
+
+const Layout = () => {
   return (
     <>
       <header>
@@ -26,23 +26,23 @@ export const router = createBrowserRouter([
   {
     // Keep Navigation on every site
     path: "/",
-    element: <NavigationWrapper />,
+    element: <Layout />,
     children: [
       {
-        path: "/festival-landingpage",
+        path: "/",
         element: <Home />,
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/festival-landingpage",
+        element: <Home />,
       },
       {
         path: "/lineup",
         element: <Lineup />,
       },
       {
-        path: "/signin",
-        element: <SignIn />
+        path: "/auth",
+        element: <AuthPage />
       },
       {
         path: "/*",

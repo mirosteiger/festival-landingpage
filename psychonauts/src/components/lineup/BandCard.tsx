@@ -1,3 +1,4 @@
+import { BandCardProps } from "types";
 import {
   Card,
   CardImage,
@@ -10,25 +11,22 @@ import {
 } from "./styled.lineup";
 import { IoIosAdd } from "react-icons/io";
 
-interface BandCardProps {
-  data: {
-    name: string;
-    img_url: string;
-    genre: string;
-    description: string;
-  };
-}
 
-export const BandCard = ({ data }: BandCardProps) => {
-  const { name, img_url, genre, description } = data;
 
+export const BandCard = ({ data, showModal, setActive }: BandCardProps) => {
+  const { name, img_url} = data;
+  
+  const handleClick = () => {
+    setActive(data);
+    showModal()
+  }
   return (
     <CardWrapper>
       <CardItem>
         <Card>
           <CardImageContainer>
             <CardImage src={img_url} alt={name} />
-            <ImageOverlay>
+            <ImageOverlay onClick={handleClick}>
               <ImageOverlayIcon>
                 <IoIosAdd />
               </ImageOverlayIcon>

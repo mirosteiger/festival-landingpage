@@ -6,13 +6,16 @@ export const GalleryWrapper = styled.ul`
   display: grid;
   gap: 1rem;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 1200px) {
+  @media (min-width: 900px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -90,8 +93,8 @@ export const ImageOverlay = styled.div`
   }
 `;
 
-export const ImageOverlayIcon = styled.div`
-  color: white;
+export const ImageOverlayIcon = styled.div<{ $color?: string }>`
+  color: ${(props) => props.$color ? props.$color : "white"};
   font-size: 4rem;
 `;
 

@@ -59,12 +59,12 @@ export const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 3rem 10rem;
+  padding: 3rem 1rem;
 
-  @media (max-width: 600px) {
+  @media (min-width: 400px) {
     padding: 3rem 5rem;
   }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     padding: 3rem 10rem;
   }
 `;
@@ -73,7 +73,7 @@ export const Spacer = styled.div<{ size: string }>`
   margin: ${(props) => props.size};
 `;
 
-export const NavButton = styled(Link)<{
+export const NavButton = styled(Link) <{
   $borderRadius?: boolean;
   $primary?: boolean;
   $big?: boolean;
@@ -109,15 +109,17 @@ export const NavButton = styled(Link)<{
   }
 `;
 
-export const H1 = styled.h1`
+export const H1 = styled.h1<{ $color?: string }>`
   font-size: 8rem;
   text-transform: capitalize;
   font-variant: small-caps;
+  color: ${(props) => props.$color ? props.$color : ""}
 `;
-export const H2 = styled.h2`
+export const H2 = styled.h2<{ $color?: string }>`
   font-size: 3rem;
   text-transform: capitalize;
   font-variant: small-caps;
+  color: ${(props) => props.$color ? props.$color : ""}
 `;
 export const H3 = styled.h3`
   font-size: 2rem;
@@ -125,11 +127,12 @@ export const H3 = styled.h3`
   font-variant: small-caps;
 `;
 
-export const Description = styled.p`
+export const Description = styled.p<{$color?: string}>`
   font-size: 1.4rem;
+  color: ${(props) => props.$color ? props.$color : ""}
 `;
 
-export const CTA = styled(Link)<{
+export const CTA = styled(Link) <{
   $bigRadius?: boolean;
   $big?: boolean;
   $fontBig?: boolean;
