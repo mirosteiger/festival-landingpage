@@ -5,7 +5,7 @@ export const FooterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding: 0.2rem 11rem;
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
   backdrop-filter: blur(5px);
