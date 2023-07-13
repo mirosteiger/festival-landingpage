@@ -18,7 +18,6 @@ export const Backdrop = styled.div`
 export const ModalContainer = styled.div`
     background-color: #e2e2e2;
     margin: 9rem;
-    min-height: 80vh;
     border-radius: 10px;
     overflow-y: scroll;
     padding: 3rem 5rem;

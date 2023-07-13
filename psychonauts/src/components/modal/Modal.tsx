@@ -1,4 +1,4 @@
-import { Description, H2, Spacer } from "GlobalStyles"
+import { Description, H2, H3, Spacer } from "GlobalStyles"
 import { Backdrop, CloseButton, ModalContainer, ModalHeader } from "./styled.modal"
 import { YoutubeEmbed } from "./YoutubeEmbed"
 import { IoIosCloseCircleOutline } from "react-icons/io"
@@ -6,6 +6,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io"
 export const Modal = (props: any) => {
 
     const { data, showModal } = props
+    console.log(data)
 
     return (
         <Backdrop >
@@ -17,6 +18,7 @@ export const Modal = (props: any) => {
                         <IoIosCloseCircleOutline size={"2.5rem"} />
                     </CloseButton>
                 </ModalHeader>
+                <H3 $color="black">({data.genre})</H3>
                 <Spacer size="2rem" />
                 <Description $color="black">{data.description}</Description>
                 <Spacer size="5rem" />
