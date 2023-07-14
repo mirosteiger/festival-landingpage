@@ -1,4 +1,4 @@
-import { H3, SectionContainer, Spacer } from "GlobalStyles";
+import { H3, SectionContainer, VSpacer } from "GlobalStyles";
 import {
   CardWrapper,
   CustomInput,
@@ -72,12 +72,12 @@ export const AuthPage = () => {
           // Register START
           <>
             <H3>Register your account</H3>
-            <Spacer size={"2rem"} />
+            <VSpacer size={"2rem"} />
             <FormWrapper onSubmit={handleRegister}>
               <CustomInput placeholder="Email" name="email" required onInput={handleInputChange} type="email" />
               <CustomInput placeholder="Password" name="password" required onChange={handleInputChange} type="password" $error={error} />
               <CustomInput placeholder="Confirm" name="confirmPassword" required onChange={handleInputChange} type="password" $error={error} />
-              <Spacer size={"1rem"} />
+              <VSpacer size={"1rem"} />
               <SubmitButton type="submit">
                 Register
               </SubmitButton>
@@ -90,11 +90,11 @@ export const AuthPage = () => {
           // Login START
           <>
             < H3 > Login to your account</H3>
-            <Spacer size={"2rem"} />
+            <VSpacer size={"2rem"} />
             <FormWrapper onSubmit={handleLogin}>
               <CustomInput placeholder="Email" name="email" required onInput={handleInputChange} type="email" />
               <CustomInput placeholder="Password" name="password" required onChange={handleInputChange} type="password" />
-              <Spacer size={"1rem"} />
+              <VSpacer size={"1rem"} />
               <SubmitButton type="submit">
                 Login
               </SubmitButton>

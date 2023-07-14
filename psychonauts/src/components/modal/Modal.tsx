@@ -1,4 +1,4 @@
-import { Description, H2, H3, Spacer } from "GlobalStyles"
+import { Description, H2, H3, VSpacer } from "GlobalStyles"
 import { Backdrop, CloseButton, ModalContainer, ModalHeader } from "./styled.modal"
 import { YoutubeEmbed } from "./YoutubeEmbed"
 import { IoIosCloseCircleOutline } from "react-icons/io"
@@ -19,9 +19,9 @@ export const Modal = (props: any) => {
                     </CloseButton>
                 </ModalHeader>
                 <H3 $color="black">({data.genre})</H3>
-                <Spacer size="2rem" />
+                <VSpacer size="2rem" />
                 <Description $color="black">{data.description}</Description>
-                <Spacer size="5rem" />
+                <VSpacer size="5rem" />
                 <YoutubeEmbed embedId={data.embedId} />
             </ModalContainer>
         </Backdrop>
