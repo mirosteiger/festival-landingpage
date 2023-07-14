@@ -2,7 +2,7 @@ import { BandCard } from "./BandCard";
 import { GalleryWrapper } from "./styled.lineup";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "database/firebaseConfigSetter";
+import { db } from "database/firebase.configSetter";
 import { IBandData } from "types";
 import { Modal } from "components/modal/Modal";
 
