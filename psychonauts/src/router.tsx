@@ -3,6 +3,8 @@ import { AuthPage } from "components/auth/AuthPage";
 import { Footer } from "components/footer/Footer";
 import { Lineup } from "components/lineup/Lineup";
 import { Navigation } from "components/navigation/Navigation";
+import { Cart } from "components/tickets/Cart";
+import { Tickets } from "components/tickets/Tickets";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
 
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
       {
         path: "/auth",
         element: <AuthPage />
+      },
+      {
+        path: "/tickets",
+        element: <Tickets />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       },
       {
         path: "/*",

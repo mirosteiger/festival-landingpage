@@ -70,8 +70,11 @@ export const SectionContainer = styled.div<{$debug?: boolean}>`
   }
 `;
 
-export const Spacer = styled.div<{ size: string }>`
-  margin: ${(props) => props.size};
+export const VSpacer = styled.div<{ size: string }>`
+  margin:  ${(props) => props.size} 0;
+`;
+export const HSpacer = styled.div<{ $size: string }>`
+  margin: 0 ${(props) => props.$size};
 `;
 
 export const NavButton = styled(Link) <{
