@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.c07ba9a4.css","mappings":"AAAA,WACE,4BAA+B,CAG/B,eAAmB,CAFnB,kIAGF","sources":["index.css"],"sourcesContent":["@font-face {\n  font-family: \"PsychoartRegular\";\n  src: local(\"PsychoartRegular\"),\n    url(\"assets/fonts/PsychoartRegular.ttf\") format(\"truetype\");\n  font-weight: normal;\n}\n"],"names":[],"sourceRoot":""}
