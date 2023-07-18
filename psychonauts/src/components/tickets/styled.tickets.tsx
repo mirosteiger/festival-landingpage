@@ -40,7 +40,7 @@ export const Category = styled.div`
     width: 30%;
 `
 
-export const PriceContainer = styled.p`
+export const PriceContainer = styled.div`
     width: 50%;
     text-align: center;
 `

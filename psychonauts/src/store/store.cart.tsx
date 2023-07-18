@@ -11,20 +11,8 @@ export const useCartStore = create<ICartStore>()(
             total: 0,
             tickets: products.data,
             add: (data, userId) => {
-                const dbRef = collection(db, "carts");
                 //Save cart to firebase
-                var userCart = {
-                    userId: userId,
-                    content: data
-                }
-
-                addDoc(dbRef, userCart)
-                    .then(docRef => {
-                        console.log("saving cart successfull: ", docRef)
-                    })
-                    .catch(e => {
-                        console.log(e)
-                    });
+                
                 set((state) => ({
                     total: state.total + data.price,
                     tickets: [...state.tickets, data as ITicket]
