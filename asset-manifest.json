@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/festival-landingpage/static/css/main.c07ba9a4.css",
-    "main.js": "/festival-landingpage/static/js/main.0663efa5.js",
+    "main.js": "/festival-landingpage/static/js/main.c7698138.js",
     "static/media/stage.jpg": "/festival-landingpage/static/media/stage.35da6dfd1db8cd280c32.jpg",
     "static/media/astro.png": "/festival-landingpage/static/media/astro.a9b5c467b16139cc2f2e.png",
     "static/media/space_banner.webp": "/festival-landingpage/static/media/space_banner.396e39bc7fb3bafc3917.webp",
     "static/media/PsychoartRegular.ttf": "/festival-landingpage/static/media/PsychoartRegular.84ca026900b698e62ce7.ttf",
     "index.html": "/festival-landingpage/index.html",
     "main.c07ba9a4.css.map": "/festival-landingpage/static/css/main.c07ba9a4.css.map",
-    "main.0663efa5.js.map": "/festival-landingpage/static/js/main.0663efa5.js.map"
+    "main.c7698138.js.map": "/festival-landingpage/static/js/main.c7698138.js.map"
   },
   "entrypoints": [
     "static/css/main.c07ba9a4.css",
-    "static/js/main.0663efa5.js"
+    "static/js/main.c7698138.js"
   ]
 }
