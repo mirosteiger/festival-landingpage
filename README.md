@@ -10,21 +10,21 @@ license: Demo
 ## TODOS:
 
 ### UI
-[] adding modal with contact-form
-[] Build a timetable
-    [] add timedata to lineup
-    [] build table component
-    [] fill timetable
-    [] (idea) mark bands as favorites to customize/filter timetable
+- [ ] adding modal with contact-form
+- [ ] Build a timetable
+    - [ ] add timedata to lineup
+    - [ ] build table component
+    - [ ] fill timetable
+    - [ ] (idea) mark bands as favorites to customize/filter timetable
 
 
 ### Database/Store
-[x] fetching band data into store to only make one call on page load
-[] extract time data to separate store (?)
+- [x] fetching band data into store to only make one call on page load
+- [ ] extract time data to separate store (?)
 
 ### Responsiveness 
-[] mobile: navigation 
-[] mobile: expand band-Infocards horizontally
-[] mobile: shrink title/date in hero section
-[] mobile: Description-Disturber should be bigger
-[] mobile: Tickets-Section -> make ticketcards responsive
+- [ ] mobile: navigation 
+- [ ] mobile: expand band-Infocards horizontally
+- [ ] mobile: shrink title/date in hero section
+- [ ] mobile: Description-Disturber should be bigger
+- [ ] mobile: Tickets-Section -> make ticketcards responsive
