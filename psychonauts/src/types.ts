@@ -48,3 +48,8 @@ export enum TicketCategory {
   SUNDAY,
   CAMPING,
 }
+
+export interface IBandStore {
+  bands: IBandData[];
+  fetchBandData: () => void;
+}
