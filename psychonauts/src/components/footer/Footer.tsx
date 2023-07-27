@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FooterElement, FooterSection, FooterWrapper } from "./styled.footer";
 
 export const Footer = () => {
@@ -6,18 +5,25 @@ export const Footer = () => {
     <FooterWrapper>
       <FooterSection>
         <FooterElement>
-          {/* TODO: Hier onClick ein Popup mit Kontaktformular, das wirklich funktioniert */}
-          Contact
+          <a
+            href="mailto:miro.steiger@outlook.de"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            {/* TODO: Hier onClick ein Popup mit Kontaktformular, das wirklich funktioniert */}
+            Contact me!
+          </a>
         </FooterElement>
       </FooterSection>
       <FooterSection>
         <FooterElement>
-          <Link
-            to="https://mirosteiger.github.io/"
+          <a
+            href="https://mirosteiger.github.io/"
+            target="_blank"
+            rel="noreferrer"
             style={{ textDecoration: "none", color: "white" }}
           >
             © 2023 Miro Steiger
-          </Link>
+          </a>
         </FooterElement>
       </FooterSection>
     </FooterWrapper>
