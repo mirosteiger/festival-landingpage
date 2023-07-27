@@ -5,10 +5,20 @@ import { Lineup } from "components/lineup/Lineup";
 import { Navigation } from "components/navigation/Navigation";
 import { Cart } from "components/tickets/Cart";
 import { Tickets } from "components/tickets/Tickets";
+import { Timetable } from "components/timetable/Timetable";
+import { useEffect } from "react";
 import { Outlet, createBrowserRouter } from "react-router-dom";
-
+import { useBandStore } from "store/store.db";
 
 const Layout = () => {
+  const { fetchBandData } = useBandStore();
+
+  //pulling the band data from firestore on page load
+  useEffect(() => {
+    fetchBandData();
+    console.log("fetched line up data")
+  }, []);
+
   return (
     <>
       <header>
@@ -44,15 +54,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/auth",
-        element: <AuthPage />
+        element: <AuthPage />,
       },
       {
         path: "/tickets",
-        element: <Tickets />
+        element: <Tickets />,
       },
       {
         path: "/cart",
-        element: <Cart />
+        element: <Cart />,
+      },
+      {
+        path: "/timetable",
+        element: <Timetable />,
       },
       {
         path: "/*",
